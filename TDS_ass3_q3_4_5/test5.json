@@ -1,0 +1,8 @@
+{
+    "model": "text-embedding-3-small",
+    "input": [
+      "Dear user, please verify your transaction code 17347 sent to kethu.seshasarathreddy@gramener.com",
+      "Dear user, please verify your transaction code 69845 sent to kethu.seshasarathreddy@gramener.com"
+    ]
+  }
+  

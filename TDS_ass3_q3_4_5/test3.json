@@ -1,0 +1,35 @@
+{
+    "model": "gpt-4o-mini",
+    "messages": [
+      { "role": "system", "content": "Respond in JSON" },
+      { "role": "user", "content": "Generate 10 random addresses in the US" }
+    ],
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "address_response",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "addresses": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "city": { "type": "string" },
+                  "state": { "type": "string" },
+                  "latitude": { "type": "number" }
+                },
+                "required": ["city", "state", "latitude"],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": ["addresses"],
+          "additionalProperties": false
+        }
+      }
+    }
+  }
+  
